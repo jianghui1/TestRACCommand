@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22939A9C718CE0258995BCCF /* libPods-TestRACCommandTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5A46048B23865C0D35E2A1 /* libPods-TestRACCommandTests.a */; };
 		5AC69B0721490F5600BCF4C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC69B0621490F5600BCF4C7 /* AppDelegate.m */; };
 		5AC69B0A21490F5600BCF4C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC69B0921490F5600BCF4C7 /* ViewController.m */; };
 		5AC69B0D21490F5600BCF4C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AC69B0B21490F5600BCF4C7 /* Main.storyboard */; };
@@ -51,6 +52,9 @@
 		5AC69B2521490F5800BCF4C7 /* TestRACCommandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestRACCommandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC69B2921490F5800BCF4C7 /* TestRACCommandUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRACCommandUITests.m; sourceTree = "<group>"; };
 		5AC69B2B21490F5800BCF4C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F7ABAF2AB65B68C0F7F002E /* Pods-TestRACCommandTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRACCommandTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestRACCommandTests/Pods-TestRACCommandTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE56BA94FE1FE7F498EF438 /* Pods-TestRACCommandTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestRACCommandTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestRACCommandTests/Pods-TestRACCommandTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC5A46048B23865C0D35E2A1 /* libPods-TestRACCommandTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestRACCommandTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22939A9C718CE0258995BCCF /* libPods-TestRACCommandTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				5AC69B1D21490F5800BCF4C7 /* TestRACCommandTests */,
 				5AC69B2821490F5800BCF4C7 /* TestRACCommandUITests */,
 				5AC69B0321490F5600BCF4C7 /* Products */,
+				7F5C8321EE5FC0E8948F2471 /* Pods */,
+				F9C009C318D457AD5C186844 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,23 @@
 			path = TestRACCommandUITests;
 			sourceTree = "<group>";
 		};
+		7F5C8321EE5FC0E8948F2471 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F7ABAF2AB65B68C0F7F002E /* Pods-TestRACCommandTests.debug.xcconfig */,
+				CAE56BA94FE1FE7F498EF438 /* Pods-TestRACCommandTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9C009C318D457AD5C186844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC5A46048B23865C0D35E2A1 /* libPods-TestRACCommandTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +180,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AC69B3121490F5800BCF4C7 /* Build configuration list for PBXNativeTarget "TestRACCommandTests" */;
 			buildPhases = (
+				4A10BD8885C300092EB50081 /* [CP] Check Pods Manifest.lock */,
 				5AC69B1621490F5800BCF4C7 /* Sources */,
 				5AC69B1721490F5800BCF4C7 /* Frameworks */,
 				5AC69B1821490F5800BCF4C7 /* Resources */,
@@ -256,6 +281,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A10BD8885C300092EB50081 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestRACCommandTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5AC69AFE21490F5600BCF4C7 /* Sources */ = {
@@ -463,6 +513,7 @@
 		};
 		5AC69B3221490F5800BCF4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7ABAF2AB65B68C0F7F002E /* Pods-TestRACCommandTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +532,7 @@
 		};
 		5AC69B3321490F5800BCF4C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE56BA94FE1FE7F498EF438 /* Pods-TestRACCommandTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
